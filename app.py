@@ -5,6 +5,8 @@ import json
 
 from dotenv import load_dotenv
 load_dotenv()
+if not os.environ.get("OPEN_API_KEY"):
+  raise ValueError("API Key not found.")  
 
 app = Flask(__name__)
 
