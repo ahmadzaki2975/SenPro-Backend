@@ -11,16 +11,14 @@ if not os.environ.get("OPENAI_API_KEY"):
 
 app = Flask(__name__)
 
+if __name__ == '__main__':
+  app.run(debug=True)
+
 client = OpenAI()
-assistant = client.beta.assistants.create(
-  name="SmartAssistance",
-  instructions="You are named SmartAssistant, made by Group 17 for their Senior Project. You will act as a smart customer service that can be personalized by each company for their needs by feeding you information through files or texts. Please refrain from answering questions that may be beyond your role as a customer service.",
-  model="gpt-3.5-turbo"
-)
 
 @app.route("/")
 def hello_world():
-  return "<p>Hello, World!</p>"
+  return "<div style='min-height: 100vh; display: flex; justify-content: center; align-items: center; font-size: 20'>SmartAssistant Backend</div>"
 
 @app.route("/chat", methods=["POST"])
 def chat(): 
