@@ -1,8 +1,6 @@
-# Backend SmartAssistance
+# Test-OpenAI-API
 
-Senior Project - Group 17
-
-AI based Customer Service
+Just testing some OpenAI API to connect to Flask Backend
 
 ## How To Run
 
